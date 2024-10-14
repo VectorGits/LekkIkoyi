@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import { FaHouse, FaPhone } from 'react-icons/fa6'
+import { FaHouse } from 'react-icons/fa6'
 import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link'  // Import the Next.js Link component
 import { HiBars3BottomRight } from 'react-icons/hi2';
