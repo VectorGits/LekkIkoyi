@@ -4,12 +4,14 @@ import AppartmentTypes from './AppartmentTypes/AppartmentTypes'
 import Properties from './Properties/Properties'
 import CityProperties from './CityProperties/CityProperties'
 import HowItWorks from './HowItWorks/HowItWorks'
+import WhyWorkWithUs from './WhyItWorks/WhyItWorks'
 
 const Home = () => {
   return (
     <div className='overflow-hidden'>
       <Hero />
-      <AppartmentTypes />
+      <WhyWorkWithUs />
+      {/* <AppartmentTypes /> */}
       <Properties />
       <CityProperties />
       <HowItWorks />
