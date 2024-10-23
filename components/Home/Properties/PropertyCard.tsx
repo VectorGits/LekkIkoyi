@@ -90,8 +90,8 @@
 
 import Image from 'next/image';
 import React from 'react';
-import { BiLinkExternal } from 'react-icons/bi';
-import { BsHeart, BsPlusSquare } from 'react-icons/bs';
+// import { BiLinkExternal } from 'react-icons/bi';
+// import { BsHeart, BsPlusSquare } from 'react-icons/bs';
 import { FaBath, FaBed, FaSquare } from 'react-icons/fa6';
 import { MdElectricBolt } from 'react-icons/md';
 
