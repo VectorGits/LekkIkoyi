@@ -15,8 +15,9 @@ const Properties = () => {
         <div className='md:flex md:items-center md:justify-between mt-4'>
           {/* Shortened and Line-Broken Description */}
           <p className='text-center md:text-left text-gray-500 leading-relaxed'>
-            Explore our curated selection of premium properties, each offering a unique <br className='hidden md:block' /> glimpse into exceptional homes and investments. Click "View Details" to learn more.
+            Explore our curated selection of premium properties, each offering a unique <br className='hidden md:block' /> glimpse into exceptional homes and investments. Click &quot;View Details&quot; to learn more.
           </p>
+
 
           {/* Desktop 'View All Properties' Button */}
           <div className='hidden md:block mt-4 md:mt-0'>
