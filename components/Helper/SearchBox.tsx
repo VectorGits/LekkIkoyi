@@ -18,7 +18,7 @@ const SearchBox = () => {
   };
 
   return (
-    <div className="w-full md:w-[50%] mx-auto bg-white py-4 sm:py-6 px-4 sm:px-8 flex flex-col sm:flex-row justify-center rounded-lg shadow-md space-y-4 sm:space-y-0">
+    <div className="w-full md:w-[50%] mx-auto bg-whit py-4 sm:py-6 px-4 sm:px-8 flex flex-col sm:flex-row justify-center rounded-lg shadow-md space-y-4 sm:space-y-0">
       <div className="flex items-center w-full">
         <input
           type="text"

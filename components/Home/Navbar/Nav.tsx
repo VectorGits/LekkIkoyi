@@ -70,7 +70,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 
@@ -102,7 +102,7 @@ const Nav = ({ openNav }: Props) => {
   }, []);
 
   return (
-    <div className={`fixed ${navBg ? 'bg-black' : 'bg-gray-400'} h-[10vh] z-[100] w-full transition-all duration-200`}>
+    <div className={`fixed ${navBg ? 'bg-gray-600' : 'bg-gray-400'} h-[10vh] z-[100] w-full transition-all duration-200`}>
       <div className='flex items-center h-full justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto'>
         
         {/* LOGO */}
@@ -131,7 +131,7 @@ const Nav = ({ openNav }: Props) => {
         <div className='flex items-center space-x-4'>
           {/* WHATSAPP BUTTON */}
           <div className='flex items-center cursor-pointer rounded-full text-white space-x-2 hover:text-rose-400 transition-all duration-200'>
-            <FaWhatsapp className='w-5 h-5' /> 
+            <FaPhone className='w-5 h-5' /> 
             <p className='font-bold text-xs sm:text-base'>888-888-888</p>
           </div>
           
