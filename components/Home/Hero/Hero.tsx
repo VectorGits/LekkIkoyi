@@ -48,10 +48,10 @@
 // export default Hero;
 
 
-
 import SearchBox from '@/components/Helper/SearchBox'
 import React from 'react'
 import { FaHome, FaBuilding, FaCity } from 'react-icons/fa'
+
 
 const Hero = () => {
   return (
@@ -66,7 +66,7 @@ const Hero = () => {
         <p className='mt-4 text-center text-sm sm:text-base text-gray-200'>We sell properties everywhere Ikoyi, Lekki & Epe</p>
 
         <div className='mt-12 w-full'>
-          <SearchBox />
+          <SearchBox  />
         </div>
 
         {/* ICONS FOR EXPLORE APARTMENTS */}

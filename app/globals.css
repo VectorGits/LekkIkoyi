@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.overflow-x-auto::-webkit-scrollbar {
+   display: none;
+ }
+
+ .overflow-x-auto {
+   scrollbar-width: none;
+ }
+
+ /* In your global CSS file or a relevant CSS module */
+
+.toast-gradient {
+   background: linear-gradient(45deg, #ff7e5f, #feb47b); /* rose gradient */
+   color: white; /* ensure text stands out on the gradient */
+   font-weight: bold;
+   border-radius: 8px;
+ }
+ 

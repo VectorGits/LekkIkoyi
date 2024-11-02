@@ -236,3 +236,112 @@ export const appartmentTypeData = [
         "Fantastic range of properties with clear details. The best platform for home and design inspiration!",
     },
   ];
+
+  export const listingsData = [
+    {
+      "id": 1,
+      "title": "Modern Family Home in Suburb",
+      "type": "house",
+      "location": {
+        "city": "Los Angeles",
+        "state": "CA",
+        "neighborhood": "Beverly Hills",
+        "address": "123 Maple Street",
+        "zip": "90210"
+      },
+      "price": 1200000,
+      "bedrooms":"04",
+      "bathrooms": "03",
+      "size_sqft": 2500,
+      "features": ["garden", "garage", "swimming pool", "fireplace"],
+      "images": [
+        "/images/p5.jpg",
+        "/images/p4.jpg",
+        "/images/p3.jpg",
+        "/images/p6.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg",
+        "/images/p3.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg"
+      ],
+      "listing_type": "sale",
+      "contact": {
+        "name": "John Doe",
+        "phone": "(123) 456-7890",
+        "email": "johndoe@realestate.com"
+      },
+      "description": "A beautiful, modern home in the heart of Beverly Hills with a spacious garden and a private pool. Perfect for families looking for luxury and comfort."
+    },
+    {
+      "id": 2,
+      "title": "Cozy Apartment Downtown",
+      "type": "apartment",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "neighborhood": "Manhattan",
+        "address": "45 Elm Street",
+        "zip": "10001"
+      },
+      "price": 3000,
+      "bedrooms": "02",
+      "bathrooms": "01",
+      "size_sqft": 800,
+      "features": ["balcony", "city view", "elevator", "gym"],
+      "images": [
+        "/images/p5.jpg",
+        "/images/p4.jpg",
+        "/images/p3.jpg",
+        "/images/p6.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg",
+        "/images/p3.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg"
+      ],
+      "listing_type": "rent",
+      "contact": {
+        "name": "Jane Smith",
+        "phone": "(987) 654-3210",
+        "email": "janesmith@realestate.com"
+      },
+      "description": "Enjoy city life in this cozy apartment located in the heart of Manhattan, with access to a gym and breathtaking city views."
+    },
+    {
+      "id": 3,
+      "title": "Luxury Condo with Ocean View",
+      "type": "condo",
+      "location": {
+        "city": "Miami",
+        "state": "FL",
+        "neighborhood": "South Beach",
+        "address": "789 Ocean Drive",
+        "zip": "33139"
+      },
+      "price": 500000,
+      "bedrooms": "03",
+      "bathrooms": "02",
+      "size_sqft": 1500,
+      "features": ["ocean view", "pool", "gym", "balcony"],
+      "images": [
+        "/images/p3.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg",
+        "/images/p3.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg",
+        "/images/p3.jpg",
+        "/images/p2.jpg",
+        "/images/p1.jpg"
+      ],
+      "listing_type": "sale",
+      "contact": {
+        "name": "Carlos Martinez",
+        "phone": "(555) 123-4567",
+        "email": "carlosm@realestate.com"
+      },
+      "description": "Experience luxury living with this stunning condo in South Beach. Featuring ocean views, a private balcony, and access to a pool and gym."
+    }
+  ]
+  

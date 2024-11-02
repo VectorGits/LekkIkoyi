@@ -3,6 +3,8 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import Footer from "@/components/Home/Footer/Footer";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const font = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -23,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ResponsiveNav />
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
         {children}
         <Footer />
       </body>

@@ -7,6 +7,7 @@ import WhyWorkWithUs from './WhyItWorks/WhyItWorks'
 import BuildingFeatures from './BuildingFeatures/BuildingFeatures'
 import Reviews from './Reviews/Reviews'
 import Blog from './Blog/Blog'
+import InquiryForm from '../Form'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <BuildingFeatures />
       <Reviews />
       <Blog />
+      <InquiryForm/>
     </div>
   )
 }
