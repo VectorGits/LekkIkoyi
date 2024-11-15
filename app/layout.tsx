@@ -5,6 +5,7 @@ import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import Footer from "@/components/Home/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { AuthProvider } from "@/context/AuthContext";
 
 const font = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body className={font.className}>
         <ResponsiveNav />
         <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
-        {children}
+        <AuthProvider>{children}</AuthProvider>
         <Footer />
       </body>
     </html>
