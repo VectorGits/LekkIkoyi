@@ -27,7 +27,7 @@ const AdminPage: React.FC = () => {
     bathrooms: "",
     description: "",
   });
-  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
   const { user, logout } = useAuth();
   const router = useRouter();
 
@@ -56,55 +56,61 @@ const AdminPage: React.FC = () => {
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setImageFile(e.target.files[0]);
-    }
-  };
+   if (e.target.files) {
+     setImageFiles(Array.from(e.target.files)); // Convert FileList to an array
+   }
+ };
+ 
 
-  const convertToBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = (error) => reject(error);
-    });
-  };
+ const convertFilesToBase64 = async (files: File[]): Promise<string[]> => {
+   const promises = files.map((file) => {
+     return new Promise<string>((resolve, reject) => {
+       const reader = new FileReader();
+       reader.readAsDataURL(file);
+       reader.onload = () => resolve(reader.result as string);
+       reader.onerror = (error) => reject(error);
+     });
+   });
+   return Promise.all(promises);
+ };
+ 
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!imageFile) {
-      toast.error("Please upload an image.");
-      return;
-    }
-
-    try {
-      const base64Image = await convertToBase64(imageFile);
-
-      const docRef = await addDoc(collection(db, "properties"), {
-        ...formData,
-        image: base64Image,
-        createdAt: new Date(),
-      });
-
-      console.log("Document written with ID: ", docRef.id);
-
-      toast.success("Data submitted successfully!");
-      setFormData({
-        title: "",
-        location: "",
-        price: "",
-        size: "",
-        bedrooms: "",
-        bathrooms: "",
-        description: "",
-      });
-      setImageFile(null);
-    } catch (error) {
-      console.error("Error submitting data:", error);
-      toast.error("Failed to submit data.");
-    }
-  };
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+   e.preventDefault();
+ 
+   if (imageFiles.length === 0) {
+     toast.error("Please upload at least one image.");
+     return;
+   }
+ 
+   try {
+     const base64Images = await convertFilesToBase64(imageFiles);
+ 
+     const docRef = await addDoc(collection(db, "properties"), {
+       ...formData,
+       images: base64Images, // Save all images as an array
+       createdAt: new Date(),
+     });
+ 
+     console.log("Document written with ID: ", docRef.id);
+ 
+     toast.success("Data submitted successfully!");
+     setFormData({
+       title: "",
+       location: "",
+       price: "",
+       size: "",
+       bedrooms: "",
+       bathrooms: "",
+       description: "",
+     });
+     setImageFiles([]);
+   } catch (error) {
+     console.error("Error submitting data:", error);
+     toast.error("Failed to submit data.");
+   }
+ };
+ 
 
 const handleLogout = async () => {
   await logout();
@@ -222,12 +228,25 @@ const handleLogout = async () => {
                   </label>
                   <input
                      type="file"
-                     id="image"
+                     id="images"
                      onChange={handleImageChange}
-                     className="w-full p-3  text-gray-400 caret-rose-200 rounded  ring-1 outline-none focus:outline-none ring-rose-100 focus:ring-2 focus:ring-rose-600"
+                     multiple
+                     className="w-full p-3 text-gray-400 caret-rose-200 rounded ring-1 outline-none focus:outline-none ring-rose-100 focus:ring-2 focus:ring-rose-600"
                   />
+                  
                </div>
             </div>
+            <div className="mt-4 grid grid-cols-2 gap-2">
+               {imageFiles.map((file, index) => (
+                  <img
+                     key={index}
+                     src={URL.createObjectURL(file)}
+                     alt={`Preview ${index + 1}`}
+                     className="w-full h-32 object-cover rounded"
+                  />
+               ))}
+            </div>
+
             <div>
             <label htmlFor="description" className="text-gray-400">
                Description

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaSearch } from 'react-icons/fa';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 const SearchBox = () => {
   const [localQuery, setLocalQuery] = useState('');
@@ -10,7 +10,7 @@ const SearchBox = () => {
 
   const handleSearch = () => {
     if (localQuery.trim()) {
-      toast.info('Searching...', { className: 'toast-gradient', theme: 'rose' });
+      // toast.info('Searching...', { className: 'toast-gradient', theme: 'rose' });
       router.push(`/listings?query=${localQuery}`);
     } else {
       toast.error('Please enter a search query');

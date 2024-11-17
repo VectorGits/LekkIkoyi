@@ -23,6 +23,7 @@ export interface Location {
    size_sqft: number;
    features: string[];
    images: string[];
+   image: string;
    listing_type: string;
    contact: Contact;
    description: string;
