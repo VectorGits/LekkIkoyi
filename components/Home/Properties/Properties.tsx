@@ -54,9 +54,10 @@ import SectionHeading from "@/components/Helper/SectionHeading";
 import React, { useEffect, useState } from "react";
 import PropertyCard from "./PropertyCard";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { Listing } from "../../../types/listing";
 
 const Properties = () => {
-  const [properties, setProperties] = useState([]);
+  const [properties, setProperties] = useState<Listing[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -66,10 +67,24 @@ const Properties = () => {
     const fetchProperties = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "properties"));
-        const fetchedProperties = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
+        const fetchedProperties: Listing[] = querySnapshot.docs.map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            title: data.title || "Untitled",
+            location: data.location || "Unknown Location",
+            price: data.price || 0,
+            size: data.size || "Unknown Size",
+            bedrooms: data.bedrooms || 0,
+            bathrooms: data.bathrooms || 0,
+            description: data.description || "No description available",
+            images: data.images || [], // Default empty array
+            type: data.type || "Unknown Type",
+            size_sqft: data.size_sqft || 0,
+            features: data.features || [],
+            image: data.image || "", // Optional fields
+          };
+        });
         setProperties(fetchedProperties);
         setLoading(false);
       } catch (err) {
@@ -78,9 +93,10 @@ const Properties = () => {
         setLoading(false);
       }
     };
-
+  
     fetchProperties();
   }, [db]);
+  
 
   if (loading) {
     return (
