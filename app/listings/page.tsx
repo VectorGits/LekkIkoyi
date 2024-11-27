@@ -11,7 +11,7 @@ const Listings = () => {
   const query = searchParams.get("query") || "";
   const router = useRouter();
   const [properties, setProperties] = useState([]);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const db = getFirestore();
 
@@ -36,7 +36,7 @@ const Listings = () => {
         setProperties(fetchedProperties);
       } catch (err) {
         console.error("Error fetching properties:", err);
-        setError("Failed to load properties.");
+        // setError("Failed to load properties.");
       }
     };
 
