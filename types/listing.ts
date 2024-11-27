@@ -13,19 +13,17 @@ export interface Location {
  }
  
  export interface Listing {
-   id: number;
-   title: string;
-   type: string;
-   location: Location;
-   price: number;
-   bedrooms: string;
-   bathrooms: string;
-   size_sqft: number;
-   features: string[];
-   images: string[];
-   image: string;
-   listing_type: string;
-   contact: Contact;
-   description: string;
- }
- 
+  id: string;
+  title: string;
+  location: string;
+  price: number;
+  size: string;
+  bedrooms: number;
+  bathrooms: number;
+  description: string;
+  images: string[];
+  type?: string;        // Optional fields
+  size_sqft?: number;
+  features?: string[];
+  image?: string;
+}

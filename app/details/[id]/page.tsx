@@ -32,14 +32,18 @@ const Page: React.FC = () => {
           const data = doc.data();
           return {
             id: doc.id,
-            title: data.title || 'Untitled',
-            location: data.location || 'Unknown Location',
+            title: data.title || "Untitled",
+            location: data.location || "Unknown Location",
             price: data.price || 0,
-            size: data.size || 'Unknown Size',
+            size: data.size || "Unknown Size",
             bedrooms: data.bedrooms || 0,
             bathrooms: data.bathrooms || 0,
-            description: data.description || 'No description available',
-            images: data.images || [], // Ensure images array is handled
+            description: data.description || "No description available",
+            images: data.images || [],
+            type: data.type || "Unknown Type", // Default for missing fields
+            size_sqft: data.size_sqft || 0,
+            features: data.features || [],
+            image: data.image || "",
           };
         });
         setProperties(fetchedProperties);
@@ -50,6 +54,7 @@ const Page: React.FC = () => {
   
     fetchProperties();
   }, [db]);
+  
   
 
   // Detect screen size changes

@@ -4,14 +4,15 @@ import React, { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
+import { Listing } from '../../../types/listing';
 import { FaBed, FaBath, FaSquare } from "react-icons/fa6";
+
 
 const Listings = () => {
   const searchParams = useSearchParams();
   const query = searchParams.get("query") || "";
   const router = useRouter();
-  const [properties, setProperties] = useState([]);
-  // const [error, setError] = useState("");
+  const [properties, setProperties] = useState<Listing[]>([]); // Explicit type added
 
   const db = getFirestore();
 
@@ -19,7 +20,7 @@ const Listings = () => {
     const fetchProperties = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "properties"));
-        const fetchedProperties = querySnapshot.docs.map((doc) => {
+        const fetchedProperties: Listing[] = querySnapshot.docs.map((doc) => {
           const data = doc.data();
           return {
             id: doc.id,
@@ -36,7 +37,6 @@ const Listings = () => {
         setProperties(fetchedProperties);
       } catch (err) {
         console.error("Error fetching properties:", err);
-        // setError("Failed to load properties.");
       }
     };
 
