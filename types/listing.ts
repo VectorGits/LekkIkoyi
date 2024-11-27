@@ -12,7 +12,9 @@ export interface Location {
    email: string;
  }
  
- export interface Listing {
+// ../../../types/listing.ts
+
+export interface Listing {
   id: string;
   title: string;
   location: string;
@@ -21,9 +23,11 @@ export interface Location {
   bedrooms: number;
   bathrooms: number;
   description: string;
-  images: string[];
-  type?: string;        // Optional fields
+  images?: string[]; // Optional
+  type?: string;
   size_sqft?: number;
   features?: string[];
-  image?: string;
+  image?: string; // Optional
 }
+
+

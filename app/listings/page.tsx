@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { Listing } from '../../../types/listing';
 import { FaBed, FaBath, FaSquare } from "react-icons/fa6";
+import { Listing } from "../../types/listing";
 
 
 const Listings = () => {
@@ -66,12 +66,13 @@ const Listings = () => {
             >
               <div className="relative">
                 <Image
-                  src={listing.image}
+                  src={listing.image as string}
                   alt={listing.title}
                   width={350}
                   height={250}
                   className="w-full object-cover h-[220px] group-hover:scale-110 transition-all duration-300"
                 />
+
                 <h1 className="px-6 absolute bottom-4 left-4 py-1.5 text-sm bg-black text-white rounded-lg">
                   <span className="text-lg font-bold">${listing.price}</span>
                 </h1>
