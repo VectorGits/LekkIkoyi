@@ -71,13 +71,14 @@ const Page: React.FC = () => {
     if (id && properties.length > 0) {
       const foundListing = properties.find((listing) => listing.id === id);
       setListing(foundListing || null);
-
-      if (foundListing && foundListing.images.length > 0) {
+  
+      if (foundListing && Array.isArray(foundListing.images) && foundListing.images.length > 0) {
         setMainImageLeft(foundListing.images[0] || null);
         setMainImageRight(foundListing.images[1] || null);
       }
     }
   }, [id, properties]);
+  
 
   // Handle thumbnail click to update main images
   const handleThumbnailClick = (image: string) => {
@@ -116,7 +117,7 @@ const Page: React.FC = () => {
       <div className="bg-black rounded-lg p-6">
         <div className="md:flex hidden flex-col lg:space-y-4">
           <div className="flex space-x-2 overflow-x-auto border-gray-500 bg-[#262626] p-2 rounded-lg">
-            {listing.images.map((image, idx) => (
+            {listing.images?.map((image, idx) => (
               <Image
                 width={100}
                 height={100}
