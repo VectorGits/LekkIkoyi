@@ -70,7 +70,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone} from 'react-icons/fa';
 import Link from 'next/link';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 

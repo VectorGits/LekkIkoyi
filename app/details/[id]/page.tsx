@@ -8,7 +8,8 @@ import { IoBed } from 'react-icons/io5';
 import { GiBathtub } from 'react-icons/gi';
 import { AiOutlineGroup } from 'react-icons/ai';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
-import { MdElectricBolt } from 'react-icons/md';
+import Image from 'next/image';
+// import { MdElectricBolt } from 'react-icons/md';
 
 const Page: React.FC = () => {
   const { id } = useParams(); // Get the ID from the URL
@@ -18,7 +19,7 @@ const Page: React.FC = () => {
   const [toggleImage, setToggleImage] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [properties, setProperties] = useState<Listing[]>([]);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const db = getFirestore();
 
@@ -44,12 +45,12 @@ const Page: React.FC = () => {
         setProperties(fetchedProperties);
       } catch (err) {
         console.error("Error fetching properties:", err);
-        setError("Failed to load properties.");
       }
     };
-
+  
     fetchProperties();
   }, [db]);
+  
 
   // Detect screen size changes
   useEffect(() => {
@@ -111,7 +112,9 @@ const Page: React.FC = () => {
         <div className="md:flex hidden flex-col lg:space-y-4">
           <div className="flex space-x-2 overflow-x-auto border-gray-500 bg-[#262626] p-2 rounded-lg">
             {listing.images.map((image, idx) => (
-              <img
+              <Image
+                width={100}
+                height={100}
                 key={idx}
                 src={image}
                 alt={`Thumbnail ${idx}`}
@@ -126,7 +129,9 @@ const Page: React.FC = () => {
 
         <div className="flex space-x-4 lg:flex-row lg:space-y-0">
           <div className="md:w-1/2 h-80 bg-black rounded-lg overflow-hidden">
-            <img
+            <Image 
+              width={100}
+              height={100}
               src={mainImageLeft || ''}
               alt={`${listing.title} - left view`}
               className="w-full h-full object-cover rounded-lg"
@@ -134,7 +139,9 @@ const Page: React.FC = () => {
           </div>
           {!isSmallScreen && (
             <div className="w-1/2 h-80 bg-black rounded-lg overflow-hidden">
-              <img
+              <Image
+                width={100}
+                height={100}
                 src={mainImageRight || ''}
                 alt={`${listing.title} - right view`}
                 className="w-full h-full object-cover rounded-lg"

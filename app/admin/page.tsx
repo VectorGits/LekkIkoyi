@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
+import Image from "next/image";
 
 setPersistence(auth, browserLocalPersistence).catch((error) => {
   console.error("Error setting persistence:", error);
@@ -238,7 +239,9 @@ const handleLogout = async () => {
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2">
                {imageFiles.map((file, index) => (
-                  <img
+                  <Image
+                     width={50}
+                     height={50}
                      key={index}
                      src={URL.createObjectURL(file)}
                      alt={`Preview ${index + 1}`}
