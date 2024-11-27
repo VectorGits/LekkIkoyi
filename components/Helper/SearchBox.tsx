@@ -12,9 +12,7 @@ const SearchBox = () => {
     if (localQuery.trim()) {
       // toast.info('Searching...', { className: 'toast-gradient', theme: 'rose' });
       router.push(`/listings?query=${localQuery}`);
-    } else {
-      toast.error('Please enter a search query');
-    }
+    } 
   };
 
   return (
