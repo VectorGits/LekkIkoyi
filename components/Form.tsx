@@ -1,28 +1,28 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 
 const InquiryForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    inquiryType: '',
-    information: '',
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    propertyType: '',
-    maxPrice: '',
-    numberOfBeds: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   inquiryType: '',
+  //   information: '',
+  //   firstName: '',
+  //   lastName: '',
+  //   email: '',
+  //   phone: '',
+  //   propertyType: '',
+  //   maxPrice: '',
+  //   numberOfBeds: '',
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission
+  // };
 
   return (
     <div className="relative flex flex-col md:flex-row bg-cover bg-center bg-fixed p-8" style={{ backgroundImage: "url('/images/hero.jpeg')" }}>
@@ -56,7 +56,7 @@ const InquiryForm: React.FC = () => {
       </div>
 
       {/* Right section */}
-      <div className="md:w-1/2 z-10 bg-white p-8 rounded-lg shadow-lg">
+      {/* <div className="md:w-1/2 z-10 bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4 text-orange-700">Got Any Inquiry?</h2>
         <p className="mb-4 text-gray-600">Start here</p>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -64,14 +64,14 @@ const InquiryForm: React.FC = () => {
             <label className="block mb-2 font-semibold text-gray-700">Inquiry Type *</label>
             <select name="inquiryType" value={formData.inquiryType} onChange={handleChange} className="w-full p-3 border border-gray-300 rounded focus:ring focus:ring-orange-200">
               <option value="">Select</option>
-              {/* Add options here */}
+             
             </select>
           </div>
           <div>
             <label className="block mb-2 font-semibold text-gray-700">Information *</label>
             <select name="information" value={formData.information} onChange={handleChange} className="w-full p-3 border border-gray-300 rounded focus:ring focus:ring-orange-200">
               <option value="">Select</option>
-              {/* Add options here */}
+             
             </select>
           </div>
           <div className="flex space-x-4">
@@ -96,7 +96,7 @@ const InquiryForm: React.FC = () => {
             <label className="block mb-2 font-semibold text-gray-700">Property *</label>
             <select name="propertyType" value={formData.propertyType} onChange={handleChange} className="w-full p-3 border border-gray-300 rounded focus:ring focus:ring-orange-200">
               <option value="">Select type</option>
-              {/* Add options here */}
+              
             </select>
           </div>
           <div className="flex space-x-4">
@@ -107,7 +107,7 @@ const InquiryForm: React.FC = () => {
             Submit
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
