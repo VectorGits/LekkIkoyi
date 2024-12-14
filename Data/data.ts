@@ -205,15 +205,15 @@ export const appartmentTypeData = [
   export const userReviewData = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Hephzibah Ezeikel",
       profession: "Real Estate Agent",
       userImage: "/images/u1.jpg",
       review:
-        "A wonderful experience! The platform made it easy to find exactly what I needed.",
+        "A wonderful experience! LekkIkoyi made it easy to find exactly what I needed.",
     },
     {
       id: 2,
-      name: "Mike Smith",
+      name: "Michael Abang",
       profession: "Property Investor",
       userImage: "/images/u2.jpg",
       review:
@@ -225,15 +225,15 @@ export const appartmentTypeData = [
       profession: "Home Buyer",
       userImage: "/images/u3.jpg",
       review:
-        "The website helped me find my dream home quickly and hassle-free. Exceptional service!",
+        "The website helped me find my dream home quickly and hassle-free. Exceptional service from LekkIkoyi!",
     },
     {
       id: 4,
-      name: "Emily Clark",
+      name: "Delight Afolabi",
       profession: "Interior Designer",
       userImage: "/images/u4.jpg",
       review:
-        "Fantastic range of properties with clear details. The best platform for home and design inspiration!",
+        "Fantastic range of properties with clear details. LekkIkoyi is the best for home and design inspiration!",
     },
   ];
 

@@ -132,7 +132,7 @@ const Nav = ({ openNav }: Props) => {
           {/* WHATSAPP BUTTON */}
           <div className='flex items-center cursor-pointer rounded-full text-white space-x-2 hover:text-rose-400 transition-all duration-200'>
             <FaPhone className='w-5 h-5' /> 
-            <p className='font-bold text-xs sm:text-base'>888-888-888</p>
+            <p className='font-bold text-xs sm:text-base'>+234-813-008-2248</p>
           </div>
           
           {/* RESPONSIVE MENU */}
