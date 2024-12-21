@@ -81,7 +81,7 @@ const HowItWorks = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg sm:text-base">Take The Keys</h3>
-              <p className="text-gray-500 text-sm">Your Dream Home Awaits: We'll help you finalize the purchase or rental agreement and get you ready to move in.</p>
+              <p className="text-gray-500 text-sm">Your Dream Home Awaits: We&apos;ll help you finalize the purchase or rental agreement and get you ready to move in.</p>
             </div>
           </div>
         </div>
