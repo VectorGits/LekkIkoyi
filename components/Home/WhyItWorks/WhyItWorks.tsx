@@ -9,7 +9,7 @@ const WhyWorkWithUs = () => {
           Why You Should Work With Us
         </h2>
         <p className="text-center text-gray-500 mb-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Your trusted partner in real estate. We offer a wide selection of properties, expert advice, and personalized service to help you buy, sell, or rent with confidence.
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-16">
           {/* Wide Range of Properties */}
@@ -20,7 +20,7 @@ const WhyWorkWithUs = () => {
             </div>
             <h3 className="text-lg font-semibold">Wide Range Of Properties</h3>
             <p className="text-gray-500">
-              We offer expert legal help for all related property items in Dubai.
+              We offer a lot of property choices that would definetely cover your needs.
             </p>
           </div>
           
@@ -32,7 +32,7 @@ const WhyWorkWithUs = () => {
             </div>
             <h3 className="text-lg font-semibold">Buy or Rent Homes</h3>
             <p className="text-gray-500">
-              We sell your home at the best market price and very quickly as well.
+              We sell you homes at the best market price and very quickly as well.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ const WhyWorkWithUs = () => {
             </div>
             <h3 className="text-lg font-semibold">Trusted by Thousands</h3>
             <p className="text-gray-500">
-              We offer you free consultancy to get a loan for your new home.
+              We are trusted by many customers for speedy and quality homes at affordable prices.
             </p>
           </div>
         </div>
