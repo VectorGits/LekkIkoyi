@@ -98,38 +98,26 @@ export const appartmentTypeData = [
     {
       id: 1,
       image: "/images/c1.jpg",
-      cityName: "New York",
+      cityName: "Ikoyi",
       numberOfProperties: 120,
     },
     {
       id: 2,
       image: "/images/c2.jpg",
-      cityName: "Los Angeles",
+      cityName: "Lekki",
       numberOfProperties: 85,
     },
     {
       id: 3,
       image: "/images/c3.jpg",
-      cityName: "Chicago",
+      cityName: "Victoria Island",
       numberOfProperties: 95,
     },
     {
       id: 4,
       image: "/images/c4.jpg",
-      cityName: "San Francisco",
+      cityName: "Epe",
       numberOfProperties: 60,
-    },
-    {
-      id: 5,
-      image: "/images/c5.jpg",
-      cityName: "Miami",
-      numberOfProperties: 70,
-    },
-    {
-      id: 6,
-      image: "/images/c6.jpg",
-      cityName: "Boston",
-      numberOfProperties: 50,
     },
   ];
   
