@@ -62,8 +62,8 @@ const Hero = () => {
       {/* CONTENT */}
       <div className='flex justify-center items-center flex-col w-[95%] sm:w-[80%] h-full mx-auto relative z-10'>
         <h1 className='text-white text-opacity-80 text-center text-base sm:text-l uppercase font-medium border rounded py-2 px-2'>The Best Way To</h1>
-        <h1 className='text-center font-semibold text-3xl sm:text-5xl text-white mt-4'>Find Your Dream Home</h1>
-        <p className='mt-4 text-center text-sm sm:text-base text-gray-200'>We sell properties everywhere Ikoyi, Lekki & Epe</p>
+        <h1 className='text-center font-semibold text-3xl sm:text-5xl text-white mt-4'>Find Your the Home of your dreams</h1>
+        <p className='mt-4 text-center text-sm sm:text-base text-gray-200'>We sell properties everywhere. From Ikoyi to VI, and Lekki to Epe</p>
 
         <div className='mt-12 w-full'>
           <SearchBox  />
