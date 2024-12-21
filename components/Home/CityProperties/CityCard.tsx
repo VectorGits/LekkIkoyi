@@ -58,7 +58,7 @@ const CityCard = ({ city }: Props) => {
         <div className='absolute inset-0 bg-black opacity-40'></div>
         <div className='absolute p-4 top-4'>
             <h1 className='text-lg font-semibold text-white'>{city.cityName}</h1>
-            <p className='text-gray-200'>{city.numberOfProperties}Properties</p>
+            <p className='text-gray-200'>{city.numberOfProperties} Properties</p>
         </div>
      
     </div>
