@@ -47,7 +47,7 @@ const HowItWorks = () => {
       <div className="text-left md:w-1/2 md:pl-8 mt-8 md:mt-0">
         <h2 className="text-3xl font-bold mb-4">How It works? Find a perfect home</h2>
         <p className="text-gray-600 mb-8">
-          Pellentesque egestas elementum eget est faucibus sem. Velit nunc egestas ut morbi. Leo diam diam.
+        We make finding your perfect property in Lagos easy and stress-free. Our streamlined process ensures a smooth and successful experience from start to finish.
         </p>
 
         {/* List of Steps */}
@@ -59,7 +59,7 @@ const HowItWorks = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg sm:text-base">Find Real Estate</h3>
-              <p className="text-gray-500 text-sm">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco.</p>
+              <p className="text-gray-500 text-sm">Browse Properties: Explore our extensive listings of homes, apartments, and land for sale and rent across Lagos.</p>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ const HowItWorks = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg sm:text-base">Meet Realtor</h3>
-              <p className="text-gray-500 text-sm">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco.</p>
+              <p className="text-gray-500 text-sm">Expert Guidance: Get personalized support from our team of knowledgeable real estate professionals who understand the Lagos market.</p>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ const HowItWorks = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg sm:text-base">Take The Keys</h3>
-              <p className="text-gray-500 text-sm">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco.</p>
+              <p className="text-gray-500 text-sm">Your Dream Home Awaits: We'll help you finalize the purchase or rental agreement and get you ready to move in.</p>
             </div>
           </div>
         </div>
